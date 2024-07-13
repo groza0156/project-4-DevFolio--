@@ -1,0 +1,18 @@
+@media (max-width: 990px) {
+  h1.fs-70 {
+    padding-inline: 200px;
+    text-align: center;
+    font-size: 70px;
+  }
+}
+@media (max-width: 840px) {
+  h1.fs-70 {
+    padding-inline: 0px;
+    font-size: 48px;
+  }
+  #Home h2::after {
+    font-size: 30px;
+  }
+}
+
+

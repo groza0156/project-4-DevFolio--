@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 62px;
+}
+
+img {
+  width: 100%;
+}
+:root {
+  --blue: rgb(0, 120, 255);
+}
+.bg-gray {
+  background-color: rgb(245, 245, 245);
+}
+.fs-70 {
+  font-size: 72px;
+}
+.w-35 {
+  width: 35%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-10 {
+  width: 10%;
+}
+.h-35 {
+  height: 35%;
+}
+/* bar */
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+body .bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+.link-style > li {
+  position: relative;
+  margin-inline: 15px;
+  padding-block: 5px;
+}
+.link-style > li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+}
+.link-style > li:hover::after {
+  width: 90%;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+  animation-name: active;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+}
+@keyframes active {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 90%;
+  }
+}
+/* home */
+#Home {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url(../img/hero-bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#Home h2::after {
+  content: "";
+  animation-name: header-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes header-animation {
+  0% {
+    content: "|";
+  }
+  3% {
+    content: "D|";
+  }
+  5% {
+    content: "De|";
+  }
+  7% {
+    content: "Dev|";
+  }
+  10% {
+    content: "Deve|";
+  }
+  13% {
+    content: "Devel|";
+  }
+  15% {
+    content: "Develo|";
+  }
+  17% {
+    content: "Develop|";
+  }
+  20% {
+    content: "Developm|";
+  }
+  24% {
+    content: "Developme|";
+  }
+  25% {
+    content: "Developmen|";
+  }
+  27% {
+    content: "Development|";
+  }
+  30% {
+    content: "Development|";
+  }
+  32% {
+    content: "Developmen|";
+  }
+  35% {
+    content: "Developme|";
+  }
+  37% {
+    content: "Develop|";
+  }
+  40% {
+    content: "Develo|";
+  }
+  42% {
+    content: "Devel|";
+  }
+  45% {
+    content: "Deve|";
+  }
+  47% {
+    content: "Dev|";
+  }
+  50% {
+    content: "De|";
+  }
+  52% {
+    content: "Des|";
+  }
+  55% {
+    content: "Desi|";
+  }
+  57% {
+    content: "Desig|";
+  }
+  60% {
+    content: "Design|";
+  }
+  62% {
+    content: "Designe|";
+  }
+  65% {
+    content: "Designer|";
+  }
+  67% {
+    content: "Designer|";
+  }
+  70% {
+    content: "Designe|";
+  }
+  72% {
+    content: "Design|";
+  }
+  75% {
+    content: "Desig|";
+  }
+  77% {
+    content: "Desi|";
+  }
+  80% {
+    content: "Des|";
+  }
+  82% {
+    content: "De|";
+  }
+  85% {
+    content: "Dev|";
+  }
+  87% {
+    content: "Deve|";
+  }
+  90% {
+    content: "Devel|";
+  }
+  92% {
+    content: "Develo|";
+  }
+  95% {
+    content: "Develop|";
+  }
+  97% {
+    content: "Develope|";
+  }
+  100% {
+    content: "Developer|";
+  }
+}
+
+/* about */
+.style::after {
+  content: "";
+  height: 3px;
+  width: 100px;
+  background-color: var(--blue);
+  position: absolute;
+  bottom: -10;
+  left: 0;
+}
+/* serv */
+#Serv .container > p::after,
+#Port .container > p::after,
+#Blog .container > p::after {
+  content: "";
+  height: 5px;
+  width: 50px;
+  background-color: var(--blue);
+  position: absolute;
+  bottom: -20;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#serv .card i {
+  border: 10px solid var(--blue);
+  transition: all 0.5s;
+}
+#Serv .card:hover i {
+  color: white;
+  border-color: rgb(205, 225, 248);
+  background-color: var(--blue);
+}
+/* exp */
+#Exp {
+  background-image: linear-gradient(
+      rgb(0, 120, 255, 0.7),
+      rgb(0, 120, 255, 0.7)
+    ),
+    url(../img/counters-bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.exp-icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 10px solid rgb(255, 255, 255, 0.8);
+}
+#Port .card img {
+  transition: all 0.5s;
+}
+#Port .card:hover img {
+  transform: scale(1.2);
+}
+
+/* test */
+#Test,
+#Form {
+  background-image: linear-gradient(
+      rgb(0, 120, 255, 0.7),
+      rgb(0, 120, 255, 0.7)
+    ),
+    url(../img/overlay-bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  transform: translateY(40px);
+}
+
+.test-img {
+  height: 130px;
+  width: 130px;
+}
+/* blog */
+.bdg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Form */
+.end-link {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 5px solid var(--blue);
+  transition: all 0.3s;
+}
+.end-link:hover {
+  border-color: rgb(205, 225, 248);
+  background-color: var(--blue);
+}
+.end-link i {
+  color: black;
+  transition: all 0.3s;
+}
+.end-link:hover i {
+  color: white;
+}
+#Copyright {
+  background-color: rgb(0, 98, 211);
+}
